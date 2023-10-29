@@ -12,34 +12,34 @@ struct Aluno
 
 int main()
 {
-    ofstream escrita;
-    Aluno alunos[3];
+   ifstream leitura;
 
-    for (int i = 0; i < 3; i++)
-    {
-        cout << "indique o nome do aluno: ";
-        getline(cin,alunos[i].nome); // string lib
-        cout << "indique a idade do aluno: ";
-        cin >> alunos[i].idade ;
-        cout << "indique o numero do aluno: ";
-        cin >> alunos[i].numero ;
-        cin.get(); // buffer clear
-    }
+   leitura.open("alunos.txt");
+   
+   if(!leitura){
+
+    cout << "erro ao abrir ficheiro";
+    exit(1);
+   }
+   else {
+    cout << "aberto com sucesso"<<endl;
+   }
+
+   while (leitura.peek() != EOF)
+   {
+    string nome,numero,idade;
     
-    escrita.open("output.txt");
 
-    if(!escrita){
-        cout << "erro ao criar ficheiro";
-        exit(1);
-    }
-
-    for (int i = 0; i < 3; i++)
-    {
-        escrita << alunos[i].nome << ";" << alunos[i].idade << ";" << alunos[i].numero << endl;  
-    }
-    
-    escrita.close();
+    getline(leitura ,nome,';');
+    getline(leitura ,numero, ';');
+    getline(leitura ,idade);
 
 
+    cout << "nome: "<< nome << endl;
+    cout << "numero: "<< numero << endl;
+    cout << "idade: "<< idade << endl;
+
+   }
+   
     return 0;
 }
