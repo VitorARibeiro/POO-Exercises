@@ -26,7 +26,7 @@ class Casa{
         float preco;
 
 
-    public:
+    public: 
 
         Casa(float _Tamanho, int _Nivel, float _preco):quarto(_Tamanho,_Nivel),preco(_preco){}
 
