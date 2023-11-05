@@ -1,11 +1,20 @@
 #include "Class.h"
 
 
+
 int main(){
 
+    Pessoa p3;
 
-    Data hoje;
+    cin >> p3;
 
-    cout << hoje;
+    cout << p3;
+
+
+
+
+
+
+    
     return 0;
 }
