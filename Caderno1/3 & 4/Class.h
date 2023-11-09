@@ -179,7 +179,7 @@ class Pessoa{
         return !(p1.nome == p2.nome && p1.data == p2.data);
     }
 
-    friend void MaisNovo(Pessoa& p1,Pessoa& p2){
+    void MaisNovo(Pessoa& p1,Pessoa& p2){
         int mais_novo;
         if (p1.data.GetAno() > p2.data.GetAno()){
             mais_novo = 1;
