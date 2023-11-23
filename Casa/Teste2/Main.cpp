@@ -14,7 +14,6 @@ int main(){
     listaFunc.push_back(vitor);
     listaFunc.push_back(barbara);
 
-
     barcelos.AddFuncionarios(listaFunc);
     barcelos.ShowFuncionarios();
 
