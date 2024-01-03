@@ -21,7 +21,7 @@ public:
         info = buffer;
         PagNumber = number;
         if (number < 10 ){
-            throw "Number < 10";
+            throw "404";
         }
     }
 
@@ -32,9 +32,6 @@ friend ostream& operator<< (ostream& os, PrinterBuffer& obj){
     return os;
 }
 
-
-
-
 };
 
 int main(){
@@ -44,7 +41,10 @@ int main(){
         PrinterBuffer B1("Vitor alberto" , 9);
     }
     catch(const char* textEx){
-        cout << "Exception: " << textEx << endl;
+        cout << "ExceptionT: " << textEx << endl;
+    }
+    catch(const int intEx){
+        cout << "Exception: " << intEx << endl;
     }
 
 

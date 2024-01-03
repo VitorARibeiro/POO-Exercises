@@ -2,7 +2,6 @@
 
 using namespace std;
 
-
 template <typename T,int Tamanho> class arrayM{
 public:
     T array[Tamanho];
@@ -39,6 +38,7 @@ public:
 int main(){
 
     arrayM<int ,10> array1; //objeto de array de inteiros com 10 de tamanhao 
+
     
     try{
         array1.fill(2);
